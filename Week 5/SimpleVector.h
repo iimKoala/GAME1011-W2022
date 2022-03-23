@@ -12,7 +12,7 @@ class SimpleVector
 {
 private:
     T* aptr;          // To point to the allocated array
-    int arraySize;    // Number of elements in the array
+        // Number of elements in the array
     void memError();  // Handles memory allocation errors
     void subError();  // Handles subscripts out of range
 
@@ -23,7 +23,7 @@ public:
         aptr = 0;
         arraySize = 0;
     }
-
+     int arraySize;
     // Constructor declaration
     SimpleVector(int);
 

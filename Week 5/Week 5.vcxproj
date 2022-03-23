@@ -147,7 +147,7 @@
     <ClCompile Include="Example5.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SearchableVector.h" />
+    <ClInclude Include="SortableVector.h" />
     <ClInclude Include="SimpleVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

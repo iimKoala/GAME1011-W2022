@@ -1,67 +1,47 @@
 #include <iostream>
-#include "SearchableVector.h"
+#include "SortableVector.h"
 using namespace std;
 
-//int main()
-//{
-//	const int SIZE = 10;
-//
-//	int i = 0;
-//
-//	SearchableVector<int> intTable(SIZE);
-//	SearchableVector<double> doubleTable(SIZE);
-//
-//	// Store value in the array
-//	for (i = 0; i < SIZE; i++)
-//	{
-//		intTable[i] = (i * 2);
-//		doubleTable[i] = (i * 2.12);
-//	}
-//
-//	// Display the values in the array
-//	cout << "These values are in intTable:\n";
-//	intTable.print();
-//
-//	cout << "These values are in doubleTable:\n";
-//	doubleTable.print();
-//
-//	// Demo the built in + operator
-//	for (i = 0; i < SIZE; i++)
-//	{
-//		intTable[i] += 5;
-//		doubleTable[i] += 5.3;
-//	}
-//
-//	cout << "These values are in intTable:\n";
-//	intTable.print();
-//
-//	cout << "These values are in doubleTable:\n";
-//	doubleTable.print();
-//
-//	// Demo the ++ operator
-//	for (i = 0; i < SIZE; i++)
-//	{
-//		intTable[i]++;
-//		doubleTable[i]++;
-//	}
-//
-//	cout << "These values are in intTable:\n";
-//	intTable.print();
-//
-//	cout << "These values are in doubleTable:\n";
-//	doubleTable.print();
-//
-//	int result;
-//	cout << "Searching for 6 in intTable.\n";
-//	result = intTable.findItem(14);
-//	if (result == -1)
-//	{
-//		cout << "6 was not found in intTable.\n";
-//	}
-//	else
-//	{
-//		cout << "6 was found in intTable at index " << result << endl;
-//	}
-//
-//	return 0;
-//}
+int main()
+{
+	const int SIZE = 10;
+	SortableVector<int> intTable(SIZE);
+	SortableVector<double> doubleTable(SIZE);
+	int intArray[SIZE] = { 4, 1, 9, 2, 5, 20, 14, 3, 5, 17 };
+	double doubleArray[SIZE] = { 12.4, 30.1, 9.14, 2.35, 17.9, 1.4, 25.4, 8.4, 20.6, 11.7 };
+
+	// Store values in the vectors
+	for (int x = 0; x < SIZE; x++)
+	{
+		intTable[x] = intArray[x];
+		doubleTable[x] = doubleArray[x];
+	}
+
+	// Display the values in the vector
+	cout << "These values are in intTable:\n";
+	for (int x = 0; x < SIZE; x++)
+		cout << intTable[x] << " ";
+	cout << endl;
+
+	cout << "These values are in doubleTable:\n";
+	for (int x = 0; x < SIZE; x++)
+		cout << doubleTable[x] << " ";
+	cout << endl;
+
+	cout << "\nCall function sortAscending on Tables.\n\n";
+	intTable.sortAscending();
+	doubleTable.sortAscending();
+
+	// Display the values in the vector
+	cout << "These values are in intTable:\n";
+	for (int x = 0; x < SIZE; x++)
+		cout << intTable[x] << " ";
+	cout << endl;
+
+	cout << "These values are in doubleTable:\n";
+	for (int x = 0; x < SIZE; x++)
+		cout << doubleTable[x] << " ";
+	cout << endl;
+
+	return 0;
+}
